@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+
 public class MainActivity extends AppCompatActivity {
 
     // Used to load the 'native-lib' library on application startup.
@@ -20,6 +21,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Button button = (Button) findViewById(R.id.button);
+        //button.setOnClickListener(new View.OnClickListener()) {
+            //@Override
+            //public void onClick(View v) {
+                //goToSecondActivity();
+            //}
+        //});
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -37,6 +45,12 @@ public class MainActivity extends AppCompatActivity {
         TextView tv = (TextView) findViewById(R.id.sample_text);
         tv.setText(stringFromJNI());
     }
+
+    //private void goToSecondActivity() {
+
+        //Intent intent = new Intent(this, SecondActivity.class);
+        //startActivity(intent);
+    //}
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
