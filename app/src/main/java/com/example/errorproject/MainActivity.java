@@ -1,5 +1,6 @@
 package com.example.errorproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 import android.support.design.widget.FloatingActionButton;
@@ -9,6 +10,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+
+
 
 
 public class MainActivity extends AppCompatActivity {
@@ -21,13 +25,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //Button button = (Button) findViewById(R.id.button);
-        //button.setOnClickListener(new View.OnClickListener()) {
-            //@Override
-            //public void onClick(View v) {
-                //goToSecondActivity();
-            //}
-        //});
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -41,16 +38,36 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+<<<<<<< HEAD
        /* // Example of a call to a native method
         TextView tv = (TextView) findViewById(R.id.sample_text);
         tv.setText(stringFromJNI()); */
+=======
+        // Example of a call to a native method
+<<<<<<< HEAD
+       /* TextView tv = (TextView) findViewById(R.id.sample_text);
+        tv.setText(stringFromJNI()); */
+=======
+        //TextView tv = (TextView) findViewById(R.id.sample_text);
+        //tv.setText(stringFromJNI());
+>>>>>>> 490851f89ac8405cc8e2f10ab01c269e7500c66d
+>>>>>>> 9d35c0ce759415e1a2de054cc6b19ae77df936c8
     }
 
-    //private void goToSecondActivity() {
+    public Button tracker1Btn;
 
-        //Intent intent = new Intent(this, SecondActivity.class);
-        //startActivity(intent);
-    //}
+        public void init() {
+            tracker1Btn = (Button) findViewById(R.id.tracker1Btn);
+            tracker1Btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    Intent track1 = new Intent(MainActivity.this, SecondActivity.class);
+
+                    startActivity(track1);
+                }
+            });
+        }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
